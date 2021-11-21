@@ -792,7 +792,7 @@ function buildServerObject(ns, node) {
         },
         hasRoot: function() { return this.instance.hasRootAccess(this.name); },
         isHost: function() { return this.name == daemonHost; },
-        getRam: function() { return this.instance.getServerRam(this.name); },
+        getRam: function() { return this.instance.getServerMaxRam(this.name); },
         ramAvailable: function() { 
             var ramArray = this.getRam(); 
             return ramArray[0] - ramArray[1];
